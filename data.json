@@ -1,0 +1,301 @@
+{
+    "project": {
+        "name": "chromerred",
+        "description": "Make Chrome JavaScript APIs chainable using the jQuery.Deferred() method.",
+        "version": "1.0.0",
+        "url": "https://github.com/TsukimiShion/chromerred"
+    },
+    "files": {
+        "src/chromerred.js": {
+            "name": "src/chromerred.js",
+            "modules": {},
+            "classes": {
+                "chromerred.runtime": 1,
+                "chromerred.storage": 1,
+                "chromerred.storage.StorageArea": 1,
+                "chromerred.tabs": 1
+            },
+            "fors": {
+                "chromerred.storage": 1
+            },
+            "namespaces": {
+                "chromerred": 1,
+                "chromerred.storage": 1
+            }
+        }
+    },
+    "modules": {},
+    "classes": {
+        "chromerred.runtime": {
+            "name": "chromerred.runtime",
+            "shortname": "chromerred.runtime",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "chromerred",
+            "file": "src/chromerred.js",
+            "line": 25,
+            "description": "Please see [chrome.runtime](https://developer.chrome.com/extensions/runtime)",
+            "static": 1
+        },
+        "chromerred.storage": {
+            "name": "chromerred.storage",
+            "shortname": "chromerred.storage",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "chromerred",
+            "file": "src/chromerred.js",
+            "line": 55,
+            "description": "Please see [chrome.storage](https://developer.chrome.com/extensions/storage)",
+            "static": 1
+        },
+        "chromerred.storage.StorageArea": {
+            "name": "chromerred.storage.StorageArea",
+            "shortname": "chromerred.storage.StorageArea",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "chromerred.storage",
+            "file": "src/chromerred.js",
+            "line": 64,
+            "description": "The class of the chromerred.storage.sync and chromerred.storage.local .\nYou can not access this class.\nPlease see [chrome.storage#type-StorageArea](https://developer.chrome.com/extensions/storage#type-StorageArea)",
+            "is_constructor": 1
+        },
+        "chromerred.tabs": {
+            "name": "chromerred.tabs",
+            "shortname": "chromerred.tabs",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "chromerred",
+            "file": "src/chromerred.js",
+            "line": 227,
+            "description": "Please see [chrome.tabs](https://developer.chrome.com/extensions/tabs)",
+            "static": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/chromerred.js",
+            "line": 32,
+            "itemtype": "method",
+            "name": "getBackgroundPage",
+            "return": {
+                "description": "",
+                "type": "Deferred Object"
+            },
+            "example": [
+                "\n     chromerred.runtime.getBackgroundPage()\n     .then(function(backgroundPage){\n         //\n     });"
+            ],
+            "class": "chromerred.runtime",
+            "namespace": "chromerred"
+        },
+        {
+            "file": "src/chromerred.js",
+            "line": 74,
+            "itemtype": "method",
+            "name": "get",
+            "params": [
+                {
+                    "name": "keys",
+                    "description": "",
+                    "type": "String|Array|null"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Deferred Object"
+            },
+            "example": [
+                "\n     chromerred.storage.sync.get(null)\n     .then(function(items){\n         //\n     });"
+            ],
+            "class": "chromerred.storage.StorageArea",
+            "namespace": "chromerred.storage"
+        },
+        {
+            "file": "src/chromerred.js",
+            "line": 96,
+            "itemtype": "method",
+            "name": "set",
+            "params": [
+                {
+                    "name": "items",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Deferred Object"
+            },
+            "example": [
+                "\n     // ex1\n     chromerred.storage.sync.set({name: \"John\"})\n     .then(function(){\n         //\n     });",
+                "\n     // ex2\n     // This is equivalent to ex1.\n     chromerred.storage.sync.set(\"name\", \"John\")\n     .then(function(){\n         //\n     });"
+            ],
+            "class": "chromerred.storage.StorageArea",
+            "namespace": "chromerred.storage"
+        },
+        {
+            "file": "src/chromerred.js",
+            "line": 132,
+            "itemtype": "method",
+            "name": "remove",
+            "params": [
+                {
+                    "name": "keys",
+                    "description": "",
+                    "type": "String|Array"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Deferred Object"
+            },
+            "example": [
+                "\n     // ex1\n     chromerred.storage.sync.remove(\"John\")\n     .then(function(){\n         //\n     });",
+                "\n     // ex2\n     // This is equivalent to ex1.\n     chromerred.storage.sync.remove([\"Mike\", \"John\"])\n     .then(function(){\n         //\n     });"
+            ],
+            "class": "chromerred.storage.StorageArea",
+            "namespace": "chromerred.storage"
+        },
+        {
+            "file": "src/chromerred.js",
+            "line": 162,
+            "itemtype": "method",
+            "name": "clear",
+            "return": {
+                "description": "",
+                "type": "Deferred Object"
+            },
+            "example": [
+                "\n     // ex1\n     chromerred.storage.sync.clear()\n     .then(function(){\n         //\n     });"
+            ],
+            "class": "chromerred.storage.StorageArea",
+            "namespace": "chromerred.storage"
+        },
+        {
+            "file": "src/chromerred.js",
+            "line": 185,
+            "itemtype": "method",
+            "name": "getBytesInUse",
+            "return": {
+                "description": "",
+                "type": "Deferred Object"
+            },
+            "example": [
+                "\n     // ex1\n     chromerred.storage.sync.getBytesInUse(\"John\")\n     .then(function(bytesInUse){\n         //\n     });"
+            ],
+            "class": "chromerred.storage.StorageArea",
+            "namespace": "chromerred.storage"
+        },
+        {
+            "file": "src/chromerred.js",
+            "line": 208,
+            "itemtype": "property",
+            "name": "sync",
+            "type": "chromerred.storage.StorageArea",
+            "class": "chromerred.storage",
+            "namespace": "chromerred"
+        },
+        {
+            "file": "src/chromerred.js",
+            "line": 215,
+            "itemtype": "property",
+            "name": "local",
+            "type": "chromerred.storage.StorageArea",
+            "class": "chromerred.storage",
+            "namespace": "chromerred"
+        },
+        {
+            "file": "src/chromerred.js",
+            "line": 236,
+            "itemtype": "method",
+            "name": "get",
+            "return": {
+                "description": "",
+                "type": "Deferred Object"
+            },
+            "params": [
+                {
+                    "name": "tabId",
+                    "description": "",
+                    "type": "Integer"
+                }
+            ],
+            "example": [
+                "\n     // ex1\n     chromerred.tabs.get(tabId)\n     .then(function(tab){\n         //\n     });"
+            ],
+            "class": "chromerred.tabs",
+            "namespace": "chromerred"
+        },
+        {
+            "file": "src/chromerred.js",
+            "line": 260,
+            "itemtype": "method",
+            "name": "getCurrent",
+            "return": {
+                "description": "",
+                "type": "Deferred Object"
+            },
+            "example": [
+                "\n     // ex1\n     chromerred.tabs.getCurrent()\n     .then(function(tab){\n         //\n     });"
+            ],
+            "class": "chromerred.tabs",
+            "namespace": "chromerred"
+        },
+        {
+            "file": "src/chromerred.js",
+            "line": 283,
+            "itemtype": "method",
+            "name": "create",
+            "return": {
+                "description": "",
+                "type": "Deferred Object"
+            },
+            "params": [
+                {
+                    "name": "createProperties",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "example": [
+                "\n     // ex1\n     chromerred.tabs.create({url: \"http://example.org/\"})\n     .then(function(tab){\n         //\n     });"
+            ],
+            "class": "chromerred.tabs",
+            "namespace": "chromerred"
+        },
+        {
+            "file": "src/chromerred.js",
+            "line": 307,
+            "itemtype": "method",
+            "name": "query",
+            "return": {
+                "description": "",
+                "type": "Deferred Object"
+            },
+            "params": [
+                {
+                    "name": "queryInfo",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "example": [
+                "\n     // ex1\n     chromerred.tabs.query({active: true})\n     .then(function(tabs){\n         //\n     });"
+            ],
+            "class": "chromerred.tabs",
+            "namespace": "chromerred"
+        }
+    ],
+    "warnings": []
+}
