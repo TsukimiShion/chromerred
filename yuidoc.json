@@ -1,0 +1,7 @@
+{
+    "name": "chromerred",
+    "description": "Make Chrome JavaScript APIs chainable using the jQuery.Deferred() method.",
+    "version": "1.0.0",
+    "url": "https://github.com/TsukimiShion/chromerred",
+    "exclude": "build,lib,node_modules,test,"
+}
