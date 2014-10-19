@@ -1,0 +1,28 @@
+{
+    "eqeqeq": true,
+    "forin": true,
+    "quotmark": "double",
+    "maxparams": 4,
+    "supernew": true,
+    "node": true,
+
+    "nonbsp": true,
+
+    "devel": true,
+
+    "bitwise": true,
+    "browser": true,
+    "curly": true,
+    "debug": true,
+    "freeze": true,
+    "jquery": true,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "noempty": true,
+    "nonew": true,
+    "nonstandard": true,
+    "strict": true,
+    "undef": true,
+    "unused": true
+}

@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+
+    "name": "chromerred_test",
+    "description": "The tests of the chromerred library.",
+    "version": "0.0.0",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+    "background": {
+        "scripts": ["eventPage.js"],
+        "persistent": false
+    },
+    "content_security_policy": "script-src 'unsafe-eval'; object-src 'self'"
+}

@@ -1,0 +1,40 @@
+{
+    "name": "chromerred",
+    "main": "src/chromerred.js",
+    "version": "1.0.0",
+    "homepage": "https://github.com/TsukimiShion/chromerred",
+    "authors": [
+        "Tsukimi Shion <tsukimishion@gmail.com>"
+    ],
+    "description": "Make Chrome JavaScript APIs chainable using the jQuery.Deferred() method.",
+    "keywords": [
+        "Deferred",
+        "jQuery",
+        "JavaScript",
+        "Chrome JavaScript API"
+    ],
+    "license": "GNU GPL v3.0",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": null
+    },
+    "devDependencies": {
+        "mocha": null,
+        "chai": null,
+        "underscore": null
+    },
+    "exportsOverride": {
+        "jquery": {
+            "": ["dist/jquery.js", "dist/jquery.min.js", "dist/jquery.min.map"]
+        },
+        "underscore": {
+            "": ["underscore.js", "underscore-min.js", "underscore-min.map"]
+        }
+    }
+}
