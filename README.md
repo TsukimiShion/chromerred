@@ -29,7 +29,9 @@ $ bower install chromerred
 - [Chrome JavaScript API](https://developer.chrome.com/extensions/api_index)
 
 ## API Reference
-Please see the [GitHub Pages](http://TsukimiShion.github.io/chromerred).
+If you want to see the reference of the latest version, please see http://TsukimiShion.github.io/chromerred .
+Or if you want to see the reference of the specifed version, please see ``` http://TsukimiShion.github.io/chromerred/v{MAJOR_VERSION}.{MINOR_VERSION}/ ``` .
+For example, if you want to see the reference of the version 1.0.0, please see http://TsukimiShion.github.io/chromerred/v1.0/ .
 This document is made by [YUIDoc](http://yui.github.io/yuidoc/).
 
 ## Exception Handling
@@ -58,13 +60,6 @@ We assume that the following tools are installed.
 - [Node.js](http://nodejs.org/)
 - [git](http://git-scm.com/)
 - [Grunt](http://gruntjs.com/)
-
-```
-$ git clone git@github.com:TsukimiShion/chromerred.git
-$ cd chromerred
-$ npm install
-$ grunt bower:install
-```
 
 ### TEST
 Tests are executed with [Chrome Extensions](https://developer.chrome.com/extensions).
